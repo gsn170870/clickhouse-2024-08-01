@@ -19,7 +19,8 @@
 - [Documentation: https://clickhouse.tech/](https://clickhouse.tech/)
 - [Altinity Blog — ClickHouse Best Practices, Tips, Tricks, & More](https://www.altinity.com/blog) 
 - [ClickHouse - YouTube](https://www.youtube.com/channel/UChtmrD-dsdpspr42P_PyRAw) 
-- [ClickHouse® is a free analytics DBMS for big data](https://github.com/ClickHouse/ClickHouse) 
+- [ClickHouse® is a free analytics DBMS for big data](https://github.com/ClickHouse/ClickHouse)
+- https://cuddly-blob-cc7.notion.site/Clickhouse-Data-361edfceabb647c48829529090d9f24f
 
 ## Datasets
 [train.csv](..%2F%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8%2Ftrain.csv)
