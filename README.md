@@ -24,3 +24,9 @@
 - https://cuddly-blob-cc7.notion.site/17cf1c0a2bc743a2af52a2b3fae01e6e
 ## Datasets
 [train.csv](..%2F%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8%2Ftrain.csv)
+
+установка pycharm 
+sudo apt update
+sudo apt upgrade
+sudo apt install snapd
+sudo snap install pycharm-community --classic
