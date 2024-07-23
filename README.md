@@ -33,3 +33,30 @@ sudo snap install pycharm-community --classic
 
 
 rc1a-kba2u19t9u3dd953.mdb.yandexcloud.net
+
+
+сертификаты
+
+sudo mkdir --parents /usr/local/share/ca-certificates/Yandex && \
+sudo wget "https://storage.yandexcloud.net/cloud-certs/RootCA.pem" \
+   --output-document /usr/local/share/ca-certificates/Yandex/RootCA.crt && \
+sudo wget "https://storage.yandexcloud.net/cloud-certs/IntermediateCA.pem" \
+   --output-document /usr/local/share/ca-certificates/Yandex/IntermediateCA.crt && \
+sudo chmod 655 \
+   /usr/local/share/ca-certificates/Yandex/RootCA.crt \
+   /usr/local/share/ca-certificates/Yandex/IntermediateCA.crt && \
+sudo update-ca-certificates
+
+
+
+mkdir -Force $HOME\.yandex; `
+curl.exe https://storage.yandexcloud.net/cloud-certs/RootCA.pem `
+   --output $HOME\.yandex\RootCA.crt; `
+curl.exe https://storage.yandexcloud.net/cloud-certs/IntermediateCA.pem `
+   --output $HOME\.yandex\IntermediateCA.pem; `
+Import-Certificate `
+   -FilePath $HOME\.yandex\RootCA.crt `
+   -CertStoreLocation cert:\CurrentUser\Root; `
+Import-Certificate `
+   -FilePath $HOME\.yandex\IntermediateCA.pem `
+   -CertStoreLocation cert:\CurrentUser\Root
