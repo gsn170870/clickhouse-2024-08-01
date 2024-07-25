@@ -1,0 +1,47 @@
+CREATE TABLE Manager (
+  ManagerID UInt32,
+  PersonID UInt32,
+  DepartmentID UInt32
+) ENGINE = MergeTree()
+ORDER BY ManagerID;
+
+-- Таблица Person
+CREATE TABLE Person (
+  PersonID UInt32,
+  Name String,
+  Surname String,
+  SocialSecurityID UInt64,
+  CompanyID UInt32
+) ENGINE = MergeTree()
+ORDER BY PersonID;
+
+-- Таблица Employee
+CREATE TABLE Employee (
+  EmployeeID UInt32,
+  PersonID UInt32,
+  Position String
+) ENGINE = MergeTree()
+ORDER BY EmployeeID;
+
+-- Таблица Company
+CREATE TABLE Company (
+  CompanyID UInt32,
+  Name String,
+  Location String
+) ENGINE = MergeTree()
+ORDER BY CompanyID;
+
+-- Таблица CompanyDepartment
+CREATE TABLE CompanyDepartment (
+  CompanyID UInt32,
+  DepartmentID UInt32
+) ENGINE = MergeTree()
+ORDER BY (CompanyID, DepartmentID);
+
+-- Таблица Department
+CREATE TABLE Department (
+  DepartmentID UInt32,
+  Name String,
+  Description String
+) ENGINE = MergeTree()
+ORDER BY DepartmentID;
