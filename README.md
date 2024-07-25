@@ -60,3 +60,7 @@ Import-Certificate `
 Import-Certificate `
    -FilePath $HOME\.yandex\IntermediateCA.pem `
    -CertStoreLocation cert:\CurrentUser\Root
+
+
+
+   docker-compose -f docker-compose.yml up
