@@ -1,3 +1,30 @@
+DROP  table testdb.winemag;
+CREATE table testdb.winemag(
+nrow UInt8,
+country String,
+description String,
+destination String,
+points UInt8,
+price Float,
+province String,
+region_1 String,
+region_2 String,
+tester_name String,
+tester_twitt String, 
+title String,
+winery String)
+engine=MergeTree()
+order by nrow;
+
+//clickhouse-client -h 127.0.0.1 -u default --password qw123456 --format_csv_delimiter="," --query "insert into testdb.winemag FORMAT CSV" < winemag-data-130k-v2-noheader.csv
+
+select country , max(price) max_price
+FROM testdb.winemag
+where country <> '' and  country is not NULL and price is not null and price <>0
+group by country 
+order by max_price desc 
+limit 10;
+
 CREATE TABLE Manager (
   ManagerID UInt32,
   PersonID UInt32,
