@@ -64,3 +64,7 @@ Import-Certificate `
 
 
    docker-compose -f docker-compose.yml up
+
+
+https://storage.yandexcloud.net/ch-data-course/covid_cases/reference/ref__country_codes.csv
+https://storage.yandexcloud.net/ch-data-course/covid_cases/raw_covid__cases.csv
